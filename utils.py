@@ -7,7 +7,7 @@ def plot_points(features, labels):
   X = np.array(features)
   y = np.array(labels)
   spam = X[np.argwhere(y==1)]
-  ham = X[np.argwher(y==0)]
+  ham = X[np.argwhere(y==0)]
   pyplot.scatter([s[0][0] for s in spam],
                 [s[0][1] for s in spam],
                 s = 100,
@@ -24,7 +24,7 @@ def plot_points(features, labels):
   pyplot.ylabel('beep')
   pyplot.legend(['happy', 'sad'])
 
-def draw_lines(a,b,c starting=0, ending=3, **kwargs):
+def draw_lines(a,b,c, starting=0, ending=3, **kwargs):
   # Plotting the line ax + bx + c = 0
   x = np.linspace(starting, ending, 1000)
   pyplot.plot(x, -c/b - a*x/b, **kwargs)
